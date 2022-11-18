@@ -28,9 +28,9 @@ namespace Bede.Services
 
         public Slot GenerateRandomSlotOnProbabiltyOfOccurrence()
         {
-            int rand = new Random().Next(0, 101);
+            int rand = new Random().Next(1, 101);
 
-            return MockData.SlotDB.First(x => x.ProbabilityRangeFrom <= rand && x.ProbabilityRangeTo >= rand);
+            return MockData.SlotDB().First(x => x.ProbabilityRangeFrom <= rand && x.ProbabilityRangeTo >= rand);
         }
     }
 }

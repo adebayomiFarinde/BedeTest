@@ -65,7 +65,7 @@ namespace Bede.Services
         {
             if (score == 0.0)
             {
-                Console.WriteLine("You loss");
+                Console.WriteLine("You lose");
 
             }
             else

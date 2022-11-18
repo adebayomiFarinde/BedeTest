@@ -4,15 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bede.Model
+namespace Bede.Data
 {
-    internal class Slot
+    internal class SetupModel
     {
         public char Data { get; set; }
         public string Description { get; set; } = string.Empty;
         public double Coefficient { get; set; }
-        public int ProbabilityRangeFrom { get; set; }
-        public int ProbabilityRangeTo { get; set; }
         public int PercentProbability { get; set; }
     }
 }

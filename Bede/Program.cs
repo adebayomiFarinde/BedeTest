@@ -11,7 +11,7 @@ double deposit = inputService.HandleAmountDeposit();
 
 accountService.DepositAmount(deposit);
 
-int gameCount = 0;
+int gameCount = default;
 
 while (Configuration.NumberOfPlayableGames > gameCount)
 {

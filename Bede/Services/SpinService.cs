@@ -8,8 +8,8 @@ namespace Bede.Services
     {
         public bool AnalyzeRandomSlotSequence(List<Slot> slots)
         {
-            var distinct = slots.DistinctBy(x => x.Data);
-            int count = distinct.Count();
+            List<Slot> distinct = slots.DistinctBy(x => x.Data).ToList();
+            int count = distinct.Count;
 
             if(count == 3)
             {
@@ -17,8 +17,8 @@ namespace Bede.Services
             }
             if (count == 2)
             {
-                return distinct.ToList()
-                    .Exists(x => x.Description.Trim().ToLower() == SymbolConstant.WildCard.Trim().ToLower());
+                return distinct
+                    .Exists(x => x.Description?.Trim().ToLower() == SymbolConstant.WildCard.Trim().ToLower());
             }
             else
             {

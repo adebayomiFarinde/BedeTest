@@ -9,7 +9,7 @@ namespace Bede.Model
     internal class Slot
     {
         public char Data { get; set; }
-        public string Description { get; set; } = string.Empty;
+        public string? Description { get; set; }
         public double Coefficient { get; set; }
         public int ProbabilityRangeFrom { get; set; }
         public int ProbabilityRangeTo { get; set; }

@@ -16,9 +16,9 @@ namespace Bede.Services
         }
         public double HandleAmountDeposit()
         {
-            double deposit = 0;
-            int depositAttemptCount = 0;
+            int depositAttemptCount = default;
 
+            double deposit;
             do
             {
                 if (depositAttemptCount > 0)
@@ -63,10 +63,9 @@ namespace Bede.Services
 
         public void HandleSpinResult(double score)
         {
-            if (score == 0.0)
+            if (score == default)
             {
                 Console.WriteLine("You lose");
-
             }
             else
             {
@@ -82,8 +81,7 @@ namespace Bede.Services
         public double HandleStakes()
         {
             int stakeInputCount = 0;
-            double stake = 0;
-
+            double stake;
             do
             {
                 if (stakeInputCount > 0)

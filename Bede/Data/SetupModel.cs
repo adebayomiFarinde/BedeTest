@@ -9,7 +9,7 @@ namespace Bede.Data
     internal class SetupModel
     {
         public char Data { get; set; }
-        public string Description { get; set; } = string.Empty;
+        public string? Description { get; set; }
         public double Coefficient { get; set; }
         public int PercentProbability { get; set; }
     }

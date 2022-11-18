@@ -17,7 +17,7 @@ namespace Bede.Services
         }
         public double HandleSlotSprint()
         {
-            double score = 0;
+            double score = default;
 
             for (int x = 0; x < Configuration.NumberOfSlotRowsInAPiece; x++)
             {

@@ -8,8 +8,8 @@ namespace Bede.Data
     {
         public static List<Slot> SlotDB()
         {
-            int minValue = 0;
-            int maxValue = 0;
+            int minValue = default;
+            int maxValue = default;
             var listSlots = new List<Slot>();
 
             SetupDB.ForEach(x =>

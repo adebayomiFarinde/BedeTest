@@ -1,4 +1,4 @@
-﻿using Bede.Data;
+﻿using Bede.Setup;
 using Bede.Model;
 using Bede.Model.Constants;
 

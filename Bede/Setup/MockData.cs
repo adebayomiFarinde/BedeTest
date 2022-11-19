@@ -2,7 +2,7 @@
 using Bede.Model.Constants;
 using System.Reflection.Metadata.Ecma335;
 
-namespace Bede.Data
+namespace Bede.Setup
 {
     internal static class MockData
     {

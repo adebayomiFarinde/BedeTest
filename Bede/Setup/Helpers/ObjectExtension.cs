@@ -1,4 +1,4 @@
-﻿namespace Bede.Data.Helpers
+﻿namespace Bede.Setup.Helpers
 {
     internal static class ObjectExtension
     {

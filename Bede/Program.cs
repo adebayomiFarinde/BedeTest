@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Bede.Data;
+using Bede.Setup;
 using Bede.Services;
 
 IAccountService accountService = new AccountService();
@@ -27,3 +27,5 @@ while (Configuration.NumberOfPlayableGames > gameCount)
 
     gameCount += 1;
 }
+
+inputService.HandleEndMessage(accountService.ShowCurrentAmount());

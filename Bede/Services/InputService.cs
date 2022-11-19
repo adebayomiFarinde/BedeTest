@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Bede.Data.Helpers;
+using Bede.Setup.Helpers;
 
 namespace Bede.Services
 {
@@ -80,7 +80,7 @@ namespace Bede.Services
 
         public double HandleStakes()
         {
-            int stakeInputCount = 0;
+            int stakeInputCount = default;
             double stake;
             do
             {
@@ -98,6 +98,17 @@ namespace Bede.Services
             Console.WriteLine(" ");
 
             return stake;
+        }
+
+        public void HandleEndMessage(double balance)
+        {
+            Console.WriteLine("Congratulations");
+            Console.WriteLine("*****************************");
+            Console.WriteLine("You have earned " + balance);
+            Console.WriteLine("*****************************");
+            Console.WriteLine("You have reached the end game of your current game deposit");
+            Console.WriteLine("Start a fresh game");
+            Console.WriteLine("The Game Ends..");
         }
     }
 }

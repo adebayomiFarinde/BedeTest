@@ -12,5 +12,6 @@ namespace Bede.Services
         double HandleStakes();
         void HandleSpinResult(double score);
         void HandleEndProgram();
+        void HandleEndMessage(double balance);
     }
 }

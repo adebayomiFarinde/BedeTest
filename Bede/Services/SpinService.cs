@@ -11,18 +11,18 @@ namespace Bede.Services
             List<Slot> distinct = slots.DistinctBy(x => x.Data).ToList();
             int count = distinct.Count;
 
-            if(count == 3)
-            {
-                return false;
-            }
             if (count == 2)
             {
                 return distinct
                     .Exists(x => x.Description?.Trim().ToLower() == SymbolConstant.WildCard.Trim().ToLower());
             }
-            else
+            if(count == 1)
             {
                 return true;
+            }
+            else
+            {
+                return false;
             }
         }
 

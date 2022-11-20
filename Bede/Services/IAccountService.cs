@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bede.Services
 {
-    internal interface IAccountService
+    public interface IAccountService
     {
         public void ClearStakeGameOver();
         public double GetLastStake();

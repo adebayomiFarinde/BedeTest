@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bede", "Bede\Bede.csproj", "{BDFD856A-87B5-467E-BE00-65B06C09C27A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bede", "Bede\Bede.csproj", "{BDFD856A-87B5-467E-BE00-65B06C09C27A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BedeTest", "BedeTest\BedeTest.csproj", "{99EF86D0-766C-4395-BC0A-0D19C3294CEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BDFD856A-87B5-467E-BE00-65B06C09C27A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDFD856A-87B5-467E-BE00-65B06C09C27A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDFD856A-87B5-467E-BE00-65B06C09C27A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99EF86D0-766C-4395-BC0A-0D19C3294CEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99EF86D0-766C-4395-BC0A-0D19C3294CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99EF86D0-766C-4395-BC0A-0D19C3294CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99EF86D0-766C-4395-BC0A-0D19C3294CEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

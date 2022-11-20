@@ -1,6 +1,6 @@
 ﻿namespace Bede.Setup
 {
-    internal class Configuration
+    public class Configuration
     {
         public const int NumberOfSlotColumnsInAPiece = 4;
 

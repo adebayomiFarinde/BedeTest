@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bede.Model.Constants
 {
-    internal static class SymbolConstant
+    public static class SymbolConstant
     {
         public const string Apple = "Apple";
 

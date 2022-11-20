@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bede.Services
 {
-    internal interface ISlotMachineService
+    public interface ISlotMachineService
     {
         double HandleSlotSprint();
     }

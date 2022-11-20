@@ -5,10 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Bede.Setup.Helpers;
 
 namespace Bede.Services
 {
-    internal class SlotMachineService : ISlotMachineService
+    public class SlotMachineService : ISlotMachineService
     {
         private readonly ISpinService _spinService;
         public SlotMachineService(ISpinService spinService)
@@ -26,7 +27,12 @@ namespace Bede.Services
 
                 for (int i = 0; i < Configuration.NumberOfSlotColumnsInAPiece; i++)
                 {
-                    slots.Add(_spinService.GenerateRandomSlotOnProbabiltyOfOccurrence());
+                    Slot? slot = _spinService.GenerateRandomSlotOnProbabiltyOfOccurrence();
+
+                    if (!slot.IsNull())
+                    {
+                        slots.Add(slot);
+                    }
                 }
 
                 slots.ForEach(x =>
@@ -40,7 +46,7 @@ namespace Bede.Services
 
                 if (wins)
                 {
-                    score = slots.Sum(x => x.Coefficient);
+                    score += slots.Sum(x => x.Coefficient);
                 }
             }
 

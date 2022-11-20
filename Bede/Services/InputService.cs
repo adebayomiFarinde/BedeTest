@@ -7,14 +7,14 @@ using Bede.Setup.Helpers;
 
 namespace Bede.Services
 {
-    internal class InputService : IInputService
+    public class InputService : IInputService
     {
         private readonly IAccountService _accountService;
         public InputService(IAccountService accountService)
         {
             _accountService = accountService;
         }
-        public double HandleAmountDeposit()
+        public double HandleEnterDeposit()
         {
             int depositAttemptCount = default;
 
@@ -78,7 +78,7 @@ namespace Bede.Services
             Console.WriteLine(" ");
         }
 
-        public double HandleStakes()
+        public double HandleEnterStakes()
         {
             int stakeInputCount = default;
             double stake;

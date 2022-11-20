@@ -1,13 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Bede.Setup;
 using Bede.Services;
+using Bede.Repositories;
 
 IAccountService accountService = new AccountService();
-ISpinService spinService = new SpinService();
+IDbRepository dbRespository = new DbRepository();
+ISpinService spinService = new SpinService(dbRespository);
 ISlotMachineService slotMachineService = new SlotMachineService(spinService);
 IInputService inputService = new InputService(accountService);
 
-double deposit = inputService.HandleAmountDeposit();
+double deposit = inputService.HandleEnterDeposit();
 
 accountService.DepositAmount(deposit);
 
@@ -15,7 +17,7 @@ int gameCount = default;
 
 while (Configuration.NumberOfPlayableGames > gameCount)
 {
-    double stake = inputService.HandleStakes();
+    double stake = inputService.HandleEnterStakes();
 
     accountService.StakeAmount(stake);
 

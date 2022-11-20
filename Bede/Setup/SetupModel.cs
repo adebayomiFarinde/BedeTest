@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bede.Setup
 {
-    internal class SetupModel
+    public class SetupModel
     {
         public char Data { get; set; }
         public string? Description { get; set; }

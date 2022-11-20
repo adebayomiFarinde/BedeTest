@@ -1,11 +1,17 @@
 ﻿using Bede.Setup;
 using Bede.Model;
 using Bede.Model.Constants;
+using Bede.Repositories;
 
 namespace Bede.Services
 {
-    internal class SpinService : ISpinService
+    public class SpinService : ISpinService
     {
+        private readonly IDbRepository _dbRespository;
+        public SpinService(IDbRepository dbRespository)
+        {
+            _dbRespository = dbRespository;
+        }
         public bool AnalyzeRandomSlotSequence(List<Slot> slots)
         {
             List<Slot> distinct = slots.DistinctBy(x => x.Data).ToList();
@@ -26,11 +32,11 @@ namespace Bede.Services
             }
         }
 
-        public Slot GenerateRandomSlotOnProbabiltyOfOccurrence()
+        public Slot? GenerateRandomSlotOnProbabiltyOfOccurrence()
         {
             int rand = new Random().Next(1, 101);
 
-            return MockData.SlotDB().First(x => x.ProbabilityRangeFrom <= rand && x.ProbabilityRangeTo >= rand);
+            return _dbRespository.GetSlotByProbabilityNumberValue(rand);
         }
     }
 }

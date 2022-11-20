@@ -2,9 +2,9 @@
 
 namespace Bede.Services
 {
-    internal interface ISpinService
+    public interface ISpinService
     {
-        Slot GenerateRandomSlotOnProbabiltyOfOccurrence();
+        Slot? GenerateRandomSlotOnProbabiltyOfOccurrence();
 
         bool AnalyzeRandomSlotSequence(List<Slot> slots);
     }

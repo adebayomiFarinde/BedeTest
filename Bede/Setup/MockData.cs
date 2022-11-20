@@ -4,32 +4,8 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace Bede.Setup
 {
-    internal static class MockData
+    public static class MockData
     {
-        public static List<Slot> SlotDB()
-        {
-            int minValue = default;
-            int maxValue = default;
-            var listSlots = new List<Slot>();
-
-            SetupDB.ForEach(x =>
-            {
-                minValue = maxValue + 1;
-                maxValue += x.PercentProbability;
-                listSlots.Add(new Slot
-                {
-                    Data = x.Data,
-                    Description = x.Description,
-                    PercentProbability = x.PercentProbability,
-                    Coefficient = x.Coefficient,
-                    ProbabilityRangeFrom = minValue,
-                    ProbabilityRangeTo = maxValue,
-                });
-            });
-
-            return listSlots;
-        }
-
         public static List<SetupModel> SetupDB => new()
         {
             new SetupModel

@@ -1,7 +1,7 @@
 ﻿
 namespace Bede.Services
 {
-    internal class AccountService : IAccountService
+    public class AccountService : IAccountService
     {
         private double _account = 0;
         private double _stake = 0;

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Bede.Services
 {
-    internal interface IInputService
+    public interface IInputService
     {
-        double HandleAmountDeposit();
-        double HandleStakes();
+        double HandleEnterDeposit();
+        double HandleEnterStakes();
         void HandleSpinResult(double score);
         void HandleEndProgram();
         void HandleEndMessage(double balance);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bede.Model
 {
-    internal class Slot
+    public class Slot
     {
         public char Data { get; set; }
         public string? Description { get; set; }
